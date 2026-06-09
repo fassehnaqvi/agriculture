@@ -1,0 +1,204 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f9f4;
+    color:#333;
+}
+
+header{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1200');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:4rem;
+    animation:fadeInDown 2s;
+}
+
+.hero p{
+    font-size:1.5rem;
+    margin:20px 0;
+    animation:fadeInUp 2s;
+}
+
+.btn{
+    text-decoration:none;
+    color:white;
+    background:green;
+    padding:12px 25px;
+    border-radius:30px;
+    transition:0.4s;
+}
+
+.btn:hover{
+    background:#0a7a0a;
+    transform:scale(1.1);
+}
+
+.container{
+    width:80%;
+    margin:auto;
+    padding:60px 0;
+    text-align:center;
+}
+
+section h2{
+    text-align:center;
+    margin:40px;
+    color:green;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    width:300px;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:15px;
+}
+
+.card p{
+    padding:0 15px 20px;
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:50px;
+    background:#dff5df;
+    flex-wrap:wrap;
+}
+
+.stat-box{
+    background:white;
+    padding:25px;
+    width:200px;
+    text-align:center;
+    border-radius:15px;
+    animation:float 3s infinite;
+}
+
+.stat-box h3{
+    color:green;
+    font-size:2rem;
+}
+
+.drone-animation{
+    padding:80px 0;
+    text-align:center;
+}
+
+.sky{
+    position:relative;
+    height:120px;
+    overflow:hidden;
+}
+
+.drone{
+    position:absolute;
+    font-size:60px;
+    animation:fly 10s linear infinite;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:green;
+    color:white;
+}
+
+@keyframes fly{
+    0%{
+        left:-100px;
+    }
+    100%{
+        left:100%;
+    }
+}
+
+@keyframes fadeInDown{
+    from{
+        opacity:0;
+        transform:translateY(-50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeInUp{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.cards{
+    flex-direction:column;
+    align-items:center;
+}
+
+.stats{
+    flex-direction:column;
+    align-items:center;
+}
+
+}
